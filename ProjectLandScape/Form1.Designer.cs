@@ -30,15 +30,16 @@
         {
             this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.dodajNowyObiektToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ObjectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nowyObiektToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.znajdźObiektToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.utwórzOSDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.narzędziaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lokalizacjaObiektuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.zarzToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pomocToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pomocToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.financeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.generatorProjektówToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -46,25 +47,26 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.dodajNowyObiektToolStripMenuItem,
-            this.narzędziaToolStripMenuItem,
-            this.pomocToolStripMenuItem,
-            this.pomocToolStripMenuItem1});
+            this.ObjectToolStripMenuItem,
+            this.toolsToolStripMenuItem,
+            this.financeToolStripMenuItem,
+            this.helpToolStripMenuItem,
+            this.generatorProjektówToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // dodajNowyObiektToolStripMenuItem
+            // ObjectToolStripMenuItem
             // 
-            this.dodajNowyObiektToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ObjectToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.nowyObiektToolStripMenuItem,
             this.znajdźObiektToolStripMenuItem,
             this.utwórzOSDToolStripMenuItem});
-            this.dodajNowyObiektToolStripMenuItem.Name = "dodajNowyObiektToolStripMenuItem";
-            this.dodajNowyObiektToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
-            this.dodajNowyObiektToolStripMenuItem.Text = "Obiekt";
+            this.ObjectToolStripMenuItem.Name = "ObjectToolStripMenuItem";
+            this.ObjectToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
+            this.ObjectToolStripMenuItem.Text = "Obiekt";
             // 
             // nowyObiektToolStripMenuItem
             // 
@@ -84,14 +86,14 @@
             this.utwórzOSDToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.utwórzOSDToolStripMenuItem.Text = "Utwórz OSD";
             // 
-            // narzędziaToolStripMenuItem
+            // toolsToolStripMenuItem
             // 
-            this.narzędziaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lokalizacjaObiektuToolStripMenuItem,
             this.zarzToolStripMenuItem});
-            this.narzędziaToolStripMenuItem.Name = "narzędziaToolStripMenuItem";
-            this.narzędziaToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
-            this.narzędziaToolStripMenuItem.Text = "Narzędzia";
+            this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
+            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
+            this.toolsToolStripMenuItem.Text = "Narzędzia";
             // 
             // lokalizacjaObiektuToolStripMenuItem
             // 
@@ -105,17 +107,23 @@
             this.zarzToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.zarzToolStripMenuItem.Text = "Zarzadzanie terem";
             // 
-            // pomocToolStripMenuItem
+            // financeToolStripMenuItem
             // 
-            this.pomocToolStripMenuItem.Name = "pomocToolStripMenuItem";
-            this.pomocToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
-            this.pomocToolStripMenuItem.Text = "Finanse";
+            this.financeToolStripMenuItem.Name = "financeToolStripMenuItem";
+            this.financeToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
+            this.financeToolStripMenuItem.Text = "Finanse";
             // 
-            // pomocToolStripMenuItem1
+            // helpToolStripMenuItem
             // 
-            this.pomocToolStripMenuItem1.Name = "pomocToolStripMenuItem1";
-            this.pomocToolStripMenuItem1.Size = new System.Drawing.Size(57, 20);
-            this.pomocToolStripMenuItem1.Text = "Pomoc";
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
+            this.helpToolStripMenuItem.Text = "Pomoc";
+            // 
+            // generatorProjektówToolStripMenuItem
+            // 
+            this.generatorProjektówToolStripMenuItem.Name = "generatorProjektówToolStripMenuItem";
+            this.generatorProjektówToolStripMenuItem.Size = new System.Drawing.Size(127, 20);
+            this.generatorProjektówToolStripMenuItem.Text = "Generator projektów";
             // 
             // contextMenuStrip1
             // 
@@ -142,16 +150,17 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem dodajNowyObiektToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ObjectToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nowyObiektToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem znajdźObiektToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem utwórzOSDToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem narzędziaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem lokalizacjaObiektuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem zarzToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem pomocToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem pomocToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem financeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem generatorProjektówToolStripMenuItem;
     }
 }
 

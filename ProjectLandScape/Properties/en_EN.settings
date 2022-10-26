@@ -1,0 +1,21 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ProjectLandScape.Properties" GeneratedClassName="en_EN">
+  <Profiles />
+  <Settings>
+    <Setting Name="menuStripObject" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Object</Value>
+    </Setting>
+    <Setting Name="menuStripTools" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Tools</Value>
+    </Setting>
+    <Setting Name="menuStripFinance" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Finance</Value>
+    </Setting>
+    <Setting Name="menuStripHelp" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Help</Value>
+    </Setting>
+    <Setting Name="menuStripGenerator" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Projects generator</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
