@@ -27,15 +27,23 @@ namespace ProjectLandScape
             generatorProjektówToolStripMenuItem.Text = en_EN.Default.menuStripGenerator;
         }
 
+        private void greetingsLoader()
+        {
+            StartWindow startWindow = new StartWindow();
+            int window_height = (int)(Size.Height * 0.5) - (int)(startWindow.Height * 0.5);
+            int window_width = (int)(Size.Width * 0.5) - (int)(startWindow.Width * 0.5);
+            startWindow.Location = new Point(window_width, window_height);
+            startWindow.Parent = this;
+
+            
+
+            menuStrip1.Visible = false;
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
             menuStripLoader();
-            Login userLogin = new Login();
-            int window_height = Size.Height - (int)(userLogin.Height * 0.5);
-            int window_width = Size.Width - (int)(userLogin.Width * 0.5);
-            // KOntrolk pokazuje się w złym miejscu - ma się skalować dynamicznie do wielkości okna!!!
-            userLogin.Location = new Point(window_width, window_height);
-            userLogin.Parent = this;
+            greetingsLoader();
             
         }
 

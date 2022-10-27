@@ -82,5 +82,17 @@ namespace ProjectLandScape.Properties {
                 this["menuStripGenerator"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Version 0.1 is live! Check README.md")]
+        public string listBoxNews {
+            get {
+                return ((string)(this["listBoxNews"]));
+            }
+            set {
+                this["listBoxNews"] = value;
+            }
+        }
     }
 }

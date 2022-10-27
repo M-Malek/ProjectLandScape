@@ -17,5 +17,8 @@
     <Setting Name="menuStripGenerator" Type="System.String" Scope="User">
       <Value Profile="(Default)">Projects generator</Value>
     </Setting>
+    <Setting Name="listBoxNews" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Version 0.1 is live! Check README.md</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
