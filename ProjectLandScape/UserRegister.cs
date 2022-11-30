@@ -35,7 +35,9 @@ namespace ProjectLandScape
 
             if (password == re_password && license_accepted)
             {
-
+                User user = new User(name, surname, email, password, 0);
+                user.registerUser();
+                this.Close();
             }
 
         }

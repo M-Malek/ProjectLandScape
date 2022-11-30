@@ -44,7 +44,8 @@ namespace ProjectLandScape
         {
             menuStripLoader();
             greetingsLoader();
-            
+            //User user = new User("jan", "test", "jan.test@test.com", "test123", 1);
+            //user.database_creator();
         }
 
     }

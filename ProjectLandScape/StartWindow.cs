@@ -28,5 +28,11 @@ namespace ProjectLandScape
             UserRegister userRegister = new UserRegister();
             userRegister.Visible = true;
         }
+
+        private void buttonLogin_Click(object sender, EventArgs e)
+        {
+            User user = new User("", "", tbLoginEmail.Text, tbLoginPassword.Text, 0);
+            user.logInUser();
+        }
     }
 }

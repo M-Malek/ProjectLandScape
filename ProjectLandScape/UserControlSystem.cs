@@ -1,22 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Runtime.Remoting.Contexts;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using Npgsql;
 
 namespace ProjectLandScape
 {
-    class User
+    public class User
     {
-        public User(string name, string surname, string email, string password)
+        public string Name, Surname, Password, EMail;
+        public int ACC_lvl;
+        public User(string name, string surname, string email, string password, int acc_lvl)
         {
-            string u_name = name;
-            string u_surname = surname;
-            string u_email = email;
-            string u_password = password;
-            int u_access_level = 1;
+            Name = name;
+            Surname = surname;
+            EMail = email;
+            Password = password;
+            ACC_lvl = acc_lvl;
+            
         }
 
         public string generateHashPassword(string password)
@@ -54,33 +59,79 @@ namespace ProjectLandScape
         
         public void registerUser()
         {
+            var cs = "Host=localhost;Username=postgres;Password=malek";
+            var con = new NpgsqlConnection(cs);
+            
+            con.Open();
+            var cmd = new NpgsqlCommand();
+            cmd.Connection = con;
 
+            //cmd.CommandText = @"";
+            //cmd.ExecuteNonQuery();
+
+            string user_password = generateHashPassword(Password);
+
+            cmd.CommandText = @"INSERT INTO users (surname, name, email, password) VALUES (@Surname, @Name, @EMail, @user_password)"; // error: column surname does not exist???
+            cmd.ExecuteNonQuery();
+            con.Close();
         }
 
         public bool logInUser()
         {
+            var cs = "Host=localhost;Username=postgres;Password=malek";
+            var con = new NpgsqlConnection(cs);
+
+            con.Open();
+            var cmd = new NpgsqlCommand();
+            cmd.Connection = con;
+
+            //Read data from database where email == email given by user
+            cmd.CommandText = @"";
+            cmd.ExecuteNonQuery();
+            con.Close();
+
+            //Decode user password
+            //string user_password = decodeHashPassword();
+
+            //If password entered by user == password saved in db, return true and read all user data from db, else: return false
+
             return true;
         }
+
+        public void database_creator()
+        {
+            /*
+             * FUnction responsible only for creating test user database -> in main project will be replaced by Python Flask or Django user auth API
+             */
+            var cs = "Host=localhost;Username=postgres;Password=malek";
+            var con = new NpgsqlConnection(cs);
+
+            /*var m_createdb_cmd = new NpgsqlCommand(@"IF DATABASE userdb NOT FOUND
+                                                        CREATE DATABASE userdb WITH OWNER = postgres ENCODING = 'UTF8' CONNECTION LIMIT = -1; 
+                                                     END IF;", con);
+            //var m_createdb_cmd = new NpgsqlCommand(@"CREATE DATABASE userdb", con);
+            con.Open();
+            m_createdb_cmd.ExecuteNonQuery();
+            con.Close();*/
+
+            con.Open();
+
+            var cmd = new NpgsqlCommand();
+            cmd.Connection = con;
+
+            //cmd.CommandText = @"CREATE TABLE users(userid SERIAL PRIMARY KEY, surname VARCHAR(255), name VARCHAR(255), email VARCHAR(255), password VARCHAR(255))";
+            //cmd.ExecuteNonQuery();
+            //con.Close();
+
+            //cmd.CommandText = @"CREATE TABLE companies(companyid SERIAL PRIMARY KEY, companyname VARCHAR(255), companykey VARCHAR(255))";
+            //cmd.ExecuteNonQuery();
+            //con.Close();
+
+            //cmd.CommandText = @"CREATE TABLE permissions(userid INT NOT NULL, companyid INT, permissionlvl INT, data VARCHAR(255), CONSTRAINT users FOREIGN KEY (userid) REFERENCES users(userid))";
+            //cmd.ExecuteNonQuery();
+            //con.Close();
+
+        }
     }
-    internal class UserControlSystem
-    {
-        /*
-        // Poczytać o dziedziczeniu, klasy muszą dziedziczyć elementy user'a
-        // Zrobić bazę danych na userów
-        public class Worker : User
-        {
-            
-        }
-
-        public class Manager : User
-        {
-
-        }
-
-        public class Chef : User
-        {
-
-        }
-        */
-    }
+    
 }
